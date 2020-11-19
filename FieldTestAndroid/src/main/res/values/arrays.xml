@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="windowSizes">
+        <item>None</item>
+        <item>128k</item>
+        <item>256k</item>
+        <item>512k</item>
+        <item>1024k</item>
+        <item>2048k</item>
+        <item>4096k</item>
+    </string-array>
+    <string-array name="threadNumbers">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>16</item>
+    </string-array>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rollingResults"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/topFrame"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/adjustmentPadding"
+    android:paddingTop="@dimen/standardPadding"
+    android:paddingRight="@dimen/adjustmentPadding" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/resultsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingLeft="@dimen/adjustmentPadding"
+            android:paddingRight="@dimen/adjustmentPadding"
+            android:paddingTop="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#083059"
+            android:textSize="@dimen/resultsLabelSize"
+            android:layout_alignBaseline="@+id/resultsIcon" />
+        <ImageView
+            android:id="@+id/resultsIcon"
+            android:layout_width="@dimen/mosIconWidth"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:adjustViewBounds="true"
+            android:paddingLeft="@dimen/adjustmentPadding"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

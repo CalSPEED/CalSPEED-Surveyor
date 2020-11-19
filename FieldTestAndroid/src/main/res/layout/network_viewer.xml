@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/signalStrengthRow"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/standardPadding"
+        android:paddingLeft="@dimen/adjustmentPadding"
+        android:paddingRight="@dimen/adjustmentPadding" >
+        <TextView
+            android:id="@+id/SignalStrengthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text="Signal Strength"
+            android:textSize="30dp"
+            android:textColor="#000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/networkNameRow"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/standardPadding"
+        android:paddingLeft="@dimen/adjustmentPadding"
+        android:paddingRight="@dimen/adjustmentPadding" >
+        <TextView
+            android:id="@+id/networkLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Carrier: "
+            android:layout_gravity="center_vertical"
+            android:textSize="24dp"
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/networkName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:textSize="24dp"
+            android:textColor="#000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/SignalStrengthType"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/standardPadding"
+        android:paddingLeft="@dimen/adjustmentPadding"
+        android:paddingRight="@dimen/adjustmentPadding" >
+        <TextView
+            android:id="@+id/SignalTypeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Signal Type : "
+            android:textSize="20dp"
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/SignalTypeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/SignalStrengthInfo"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/standardPadding"
+        android:paddingLeft="@dimen/adjustmentPadding"
+        android:paddingRight="@dimen/adjustmentPadding" >
+        <TextView
+            android:id="@+id/SignalStrengthName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Signal Strength: "
+            android:textSize="20dp"
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/SignalStrengthValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/SignalStrengthUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text=" dBm"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LocationAreaCodeRow"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/standardPadding"
+        android:paddingLeft="@dimen/adjustmentPadding"
+        android:paddingRight="@dimen/adjustmentPadding" >
+        <TextView
+            android:id="@+id/LocationAreaCodeKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="LAC: "
+            android:textSize="20dp"
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/LocationAreaCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/CellTowerIdRow"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/standardPadding"
+        android:paddingLeft="@dimen/adjustmentPadding"
+        android:paddingRight="@dimen/adjustmentPadding" >
+        <TextView
+            android:id="@+id/CellTowerIdKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="CID: "
+            android:textSize="20dp"
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/CellTowerId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="20dp"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+</LinearLayout>

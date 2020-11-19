@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/topFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/standardPadding"
+        android:paddingTop="@dimen/adjustmentPadding" >
+
+        <TextView
+            android:id="@+id/topText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/adjustmentPadding"
+            android:text="@string/clickStartButton"
+            android:textColor="@color/black"
+            android:textSize="@dimen/topText" />
+
+        <ToggleButton
+            android:id="@+id/indoorOutdoorToggle"
+            android:layout_width="@dimen/toggleButtonSize"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/gradient"
+            android:drawableLeft="@drawable/indoortoggle"
+            android:drawableRight="@drawable/outdoortoggle"
+            android:paddingBottom="@dimen/standardPadding"
+            android:textColor="#083059"
+            android:textOff="@string/Indoor"
+            android:textOn="@string/Outdoor"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingLeft="@dimen/adjustmentPadding"
+            android:paddingBottom="@dimen/adjustmentPadding"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:paddingBottom="@dimen/standardPadding"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/locationCodeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:text="Location ID:"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/locationCode"
+                    android:paddingBottom="@dimen/smallPadding"
+                    />
+                <TextView
+                    android:id="@+id/locationCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text=" "
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/locationCode"
+                    android:paddingLeft="@dimen/smallPadding"
+                    android:paddingBottom="@dimen/smallPadding"
+                    />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/smallPadding"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/Lat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/infoTextHeight"
+                    android:layout_weight="1"
+                    android:text="Latitude:"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/infoTextSize"
+                    />
+
+                <TextView
+                    android:id="@+id/Long"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/infoTextHeight"
+                    android:layout_weight="1"
+                    android:text="Longitude:"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/infoTextSize"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/smallPadding"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/Network"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/infoTextHeight"
+                    android:layout_weight="1"
+                    android:text="Network:"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/infoTextSize"
+                    />
+                <TextView
+                    android:id="@+id/Technology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/infoTextHeight"
+                    android:layout_weight="1"
+                    android:text="Technology:"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/infoTextSize"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:progressDrawable="@drawable/blueprogress"
+        android:maxHeight="@dimen/loadingBarHeight"
+        android:minHeight="@dimen/loadingBarHeight"
+        android:paddingBottom="@dimen/adjustmentPadding"
+        android:id="@+id/ProgressBar"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:visibility="gone"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/finalStatus"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/standardPadding"
+        >
+
+        <LinearLayout
+            android:id="@+id/testStatus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusHeight"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/adjustmentPadding"
+            android:paddingTop="@dimen/adjustmentPadding">
+
+            <ImageView
+                android:id="@+id/testStatusIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:src="@drawable/blank_checkbox" />
+
+            <TextView
+                android:id="@+id/testStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/smallPadding"
+                android:paddingRight="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/resultsSaved"
+                android:textColor="#083059"
+                android:textSize="@dimen/statusTextSize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/uploadedStatus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusHeight"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/adjustmentPadding"
+            android:paddingRight="@dimen/adjustmentPadding">
+
+            <ImageView
+                android:id="@+id/uploadedStatusIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:paddingLeft="@dimen/adjustmentPadding"
+                android:src="@drawable/blank_checkbox" />
+
+            <TextView
+                android:id="@+id/uploadedStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/smallPadding"
+                android:paddingRight="@dimen/adjustmentPadding"
+                android:paddingTop="@dimen/adjustmentPadding"
+                android:text="@string/resultsUploaded"
+                android:textColor="#083059"
+                android:textSize="@dimen/statusTextSize" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#909090" />
+
+    <LinearLayout
+        android:id="@+id/middleFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LowerFrame"
+        android:layout_below="@+id/maxMiddleFrame"
+        android:layout_weight=".1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/standardPadding"
+        android:paddingBottom="5dp"
+        android:paddingRight="@dimen/adjustmentPadding" >
+        <ListView
+            android:id="@+id/resultsListView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LowerFrame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/ButtonStandardTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/bluebutton"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buttonTextSize"
+            android:text="@string/standardTest" >
+        </Button>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/TextViewMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/standardPadding"
+        android:paddingTop="@dimen/standardPadding"
+        android:scrollbars="vertical"
+        android:text=""
+        android:visibility="gone" />
+
+</LinearLayout>

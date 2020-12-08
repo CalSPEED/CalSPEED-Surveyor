@@ -4,6 +4,34 @@ Modified work: The original source code (AndroidNdt.java) comes from the NDT And
               that is available from http://code.google.com/p/ndt/.
               It's modified for the CalSPEED Android app by California
               State University Monterey Bay (CSUMB) on April 29, 2013.
+
+Copyright (c) 2020, California State University Monterey Bay (CSUMB).
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice,
+       this list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above
+       copyright notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+
+    3. Neither the name of the CPUC, CSU Monterey Bay, nor the names of
+       its contributors may be used to endorse or promote products derived from
+       this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 package gov.ca.cpuc.fieldtest.android;
@@ -224,17 +252,11 @@ public class Constants {
     /**
      * URL for reverse geocoding and arcGIS data gathering
      */
-    public static final String ARCGIS_GEOMETRYSERVER = "http://tasks.arcgisonline.com/ArcGIS/rest/"
-            + "services/Geometry/GeometryServer/project?inSR=%d&outSR=%d&geometries=%f,%f&f=json";
+    public static final String ARCGIS_GEOMETRYSERVER = "";
     public static final int IN_SECRET = 0;
     public static final int OUT_SECRET = 0;
 
-    public static final String ARCGIS_MAPSERVER = "http://cpuc.cloudapp.net/ArcGIS/rest/services/"
-            + "CalSPEED_Mobile_App/MapServer/0/query?text=&geometry=%f,%f&"
-            + "geometryType=esriGeometryPoint&inSR=%d&spatialRel=esriSpatialRelIntersects&relationParam"
-            + "=&objectIds=&where=&time=&returnCountOnly=false&returnIdsOnly=false" +
-            "&returnGeometry=false"
-            + "&maxAllowableOffset=&outSR=%d&outFields=*&f=pjson";
+    public static final String ARCGIS_MAPSERVER = "";
 
 
     private Constants() {

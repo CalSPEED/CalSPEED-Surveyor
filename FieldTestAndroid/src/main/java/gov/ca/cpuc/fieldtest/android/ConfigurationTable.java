@@ -1,3 +1,33 @@
+/*
+Copyright (c) 2020, California State University Monterey Bay (CSUMB).
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice,
+       this list of conditions and the following disclaimer.
+
+    2. Redistributions in binary form must reproduce the above
+       copyright notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the distribution.
+
+    3. Neither the name of the CPUC, CSU Monterey Bay, nor the names of
+       its contributors may be used to endorse or promote products derived from
+       this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
 package gov.ca.cpuc.fieldtest.android;
 
 import java.util.ArrayList;
@@ -39,19 +69,13 @@ class ConfigurationTable {
     final Integer MOBILE_LEVEL_ONE_KEY = 10000;
     final Integer MOBILE_LEVEL_TWO_KEY = 100000;
     final Integer MOBILE_LEVEL_THREE_KEY = 250000;
-//    final Integer MOBILE_LEVEL_FOUR_KEY = 15000;
-//    final Integer MOBILE_LEVEL_FIVE_KEY = 25000;
     final Integer MOBILE_LEVEL_FOUR_KEY = Integer.MAX_VALUE;
     final String MOBILE_LEVEL_ONE_VALUE = String.format("%s:1,%s:256,%s:20",
             Constants.THREAD_NUMBER, Constants.WINDOW_SIZE, Constants.TEST_TIME);
     final String MOBILE_LEVEL_TWO_VALUE = String.format("%s:4,%s:256,%s:20",
             Constants.THREAD_NUMBER, Constants.WINDOW_SIZE, Constants.TEST_TIME);
-    final String MOBILE_LEVEL_THREE_VALUE = String.format("%s:4,%s:256,%s:20",
+    final String MOBILE_LEVEL_THREE_VALUE = String.format("%s:8,%s:256,%s:20",
             Constants.THREAD_NUMBER, Constants.WINDOW_SIZE, Constants.TEST_TIME);
-//    final String MOBILE_LEVEL_FOUR_VALUE = String.format("%s:6,%s:128,%s:20",
-//            Constants.THREAD_NUMBER, Constants.WINDOW_SIZE, Constants.TEST_TIME);
-//    final String MOBILE_LEVEL_FIVE_VALUE = String.format("%s:8,%s:128,%s:20",
-//            Constants.THREAD_NUMBER, Constants.WINDOW_SIZE, Constants.TEST_TIME);
     final String MOBILE_LEVEL_FOUR_VALUE = String.format("%s:8,%s:512,%s:20",
             Constants.THREAD_NUMBER, Constants.WINDOW_SIZE, Constants.TEST_TIME);
 
@@ -68,11 +92,6 @@ class ConfigurationTable {
             Constants.WINDOW_SIZE, Constants.TEST_TIME);
 
     // DEFAULT VALUES
-    /*
-    final String MOBILE_DEFAULT_VALUE = String.format("%s:%d,%s:%s,%s:%d", Constants.THREAD_NUMBER,
-            Constants.DEFAULT_THREAD_NUMBER, Constants.WINDOW_SIZE, Constants.DEFAULT_WINDOW_SIZE,
-            Constants.TEST_TIME, Constants.DEFAULT_TEST_TIME);
-    */
     final String MOBILE_DEFAULT_VALUE = String.format("%s:%d,%s:256,%s:%d", Constants.THREAD_NUMBER,
             Constants.DEFAULT_THREAD_NUMBER, Constants.WINDOW_SIZE,
             Constants.TEST_TIME, Constants.DEFAULT_TEST_TIME);
@@ -94,8 +113,6 @@ class ConfigurationTable {
         mobileTable.put(MOBILE_LEVEL_TWO_KEY, stringToMap(MOBILE_LEVEL_TWO_VALUE));
         mobileTable.put(MOBILE_LEVEL_THREE_KEY, stringToMap(MOBILE_LEVEL_THREE_VALUE));
         mobileTable.put(MOBILE_LEVEL_FOUR_KEY, stringToMap(MOBILE_LEVEL_FOUR_VALUE));
-//        mobileTable.put(MOBILE_LEVEL_FIVE_KEY, stringToMap(MOBILE_LEVEL_FIVE_VALUE));
-//        mobileTable.put(MOBILE_LEVEL_SIX_KEY, stringToMap(MOBILE_LEVEL_SIX_VALUE));
         configTable.put(Constants.MOBILE, mobileTable);
         Map<Integer, Map<String, Integer>> wifiTable = new TreeMap<>();
         wifiTable.put(WIFI_LEVEL_ONE_KEY, stringToMap(WIFI_LEVEL_ONE_VALUE));
